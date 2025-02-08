@@ -4,12 +4,12 @@
     $email = addslashes($_POST['email']);
     $celular = addslashes($_POST['celular']);
 
-    $para = "gregoriotiago947@gmail.com";
-    $assunto = "Coleta de clientes - Tiago Gregório";
+    $para = "email";
+    $assunto = "nome do assunto";
 
     $corpo = "Nome: ".$nome."\n"."E-Mail: ".$email."\n"."Telefone para contato: ".$celular;
 
-    $cabeca = "From: tiagotelesqa@gmail.com"."\n"."Reply-to: ".$email."\n"."X-Mailer:PHP/".phpversion();
+    $cabeca = "From: #"."\n"."Reply-to: ".$email."\n"."X-Mailer:PHP/".phpversion();
 
     if(mail($para,$assunto,$corpo,$cabeca)){
         echo("E-Mail enviado com sucesso!");
